@@ -1,8 +1,6 @@
 # azure-
 
-Βέβαια! Θα σου γράψω μια **καθαρή, επαγγελματική περιγραφή** του project σου στα αγγλικά, έτοιμη για documentation ή παρουσίαση:
 
----
 
 # Project Description: Azure IoT Edge End-to-End Telemetry Filtering and Storage
 
@@ -37,20 +35,7 @@ The goal of the project was to deploy an Azure IoT Edge device, simulate telemet
      date=YYYY-MM-DD/hour=HH/minute=MM/part-xxxxx.json
      ```
 
----
 
-## Troubleshooting and Solutions
-
-- **Issue:** Filesystem remounted as read-only (`ro`) after a device crash (caused by inserting a Linux installation USB stick).
-- **Solution:** 
-  - Re-mounted filesystem as `rw`.
-  - Re-created missing directory `/var/lib/aziot/edged/mnt` with correct permissions (`iotedge:iotedge`).
-  - Restarted IoT Edge runtime and recovered module functionality.
-
-- **Issue:** Stream Analytics job initially did not find telemetry field `temperature`.
-- **Solution:** 
-  - Updated query to correctly point to nested telemetry field `machine.temperature`.
-  - Restarted Stream Analytics job to reflect changes.
 
 - **Verification:**  
   - Verified live telemetry from the device using `az iot hub monitor-events`.
@@ -89,8 +74,3 @@ This project successfully demonstrated a complete Azure IoT Edge solution — fr
 - Long-term data archiving
 - Advanced predictive analytics (ML models)
 
----
-
-✅ **Would you also like me to prepare a clean diagram (architecture flow) for this project?**  
-(It would look great if you want to present it somewhere!) 🚀  
-Just say "yes"!
